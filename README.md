@@ -12,8 +12,9 @@ Get your horizantal smooth multi-select widget.
   - Create you preffered customized multi list
   - Put it anywhere
 
-![Image description](https://c.imge.to/2019/07/27/dJleR.png)
+### ScreenShots
 
+<img src='demo.gif' height='300em'/>
 
 ### Installation
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class SingleWidget extends StatefulWidget {
   final Color color;
   final List<String> selectionList;
@@ -11,14 +12,14 @@ class SingleWidget extends StatefulWidget {
   final BorderRadius borderRadius;
   SingleWidget(
       {@required this.itemName,
-        @required this.width,
-        @required this.height,
-        @required this.borderWidth,
-        @required this.borderRadius,
-        @required this.color,
-        @required this.onChangeFunction,
-        @required this.selectionList,
-        @required this.insideWidget});
+      @required this.width,
+      @required this.height,
+      @required this.borderWidth,
+      @required this.borderRadius,
+      @required this.color,
+      @required this.onChangeFunction,
+      @required this.selectionList,
+      @required this.insideWidget});
   @override
   _SingleWidget createState() => _SingleWidget();
 }
@@ -31,6 +32,7 @@ class _SingleWidget extends State<SingleWidget>
   int alpha;
   @override
   void initState() {
+    // TODO: implement initState
     super.initState();
     _controller =
         AnimationController(duration: Duration(milliseconds: 500), vsync: this);
@@ -75,7 +77,7 @@ class _SingleWidget extends State<SingleWidget>
                     border: Border.all(
                       color: widget.color
                           .withAlpha(255 - (_controller.value.toInt() * 255)),
-                      width: 4.0,
+                      width: widget.borderWidth,
                     )),
                 child: widget.insideWidget));
       },

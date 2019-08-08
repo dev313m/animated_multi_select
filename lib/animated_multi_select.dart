@@ -17,17 +17,17 @@ class MultiSelectChip extends StatefulWidget {
   final double introWidgetWidth;
   MultiSelectChip(
       {@required this.mainList,
-        this.introWidgetWidth,
-        @required this.reverseScroll,
-        this.introWidget,
-        @required this.borderRadius,
-        @required this.borderWidth,
-        @required this.widgetList,
-        @required this.onSelectionChanged,
-        @required this.initialSelectionList,
-        @required this.width,
-        @required this.height,
-        @required this.color});
+      this.introWidgetWidth,
+      @required this.reverseScroll,
+      this.introWidget,
+      @required this.borderRadius,
+      @required this.borderWidth,
+      @required this.widgetList,
+      @required this.onSelectionChanged,
+      @required this.initialSelectionList,
+      @required this.width,
+      @required this.height,
+      @required this.color});
 
   @override
   _MultiSelectChipState createState() => _MultiSelectChipState();
@@ -60,6 +60,7 @@ class _MultiSelectChipState extends State<MultiSelectChip> {
 
   @override
   void initState() {
+    // TODO: implement initState
     super.initState();
 
     selectedChoices = widget.initialSelectionList;
@@ -88,19 +89,12 @@ class _MultiSelectChipState extends State<MultiSelectChip> {
             reverse: widget.reverseScroll,
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              widget.reverseScroll == false
-                  ? SizedBox(
+              SizedBox(
                 width: widget.introWidgetWidth,
-              )
-                  : SizedBox(),
+              ),
               Row(
                 children: _buildChoiceList(),
               ),
-              widget.reverseScroll == true
-                  ? SizedBox(
-                width: widget.introWidgetWidth,
-              )
-                  : SizedBox(),
             ],
           ),
           Align(
