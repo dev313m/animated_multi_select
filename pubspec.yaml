@@ -2,7 +2,7 @@ name: animated_multi_select
 description: Customizable animated multi select. Get rid of the boring ones.
 version: 1.0.0
 author: Alrasasi <rasasi.b@gmail.com>
-homepage: https://github.com/dev313m
+homepage: https://github.com/dev313m/animated_multi_select
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
